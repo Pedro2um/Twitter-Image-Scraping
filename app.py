@@ -118,6 +118,10 @@ def extract_images_from_dataset(download_folder = None, wait_time_in_seconds = 5
 #url = 'https://twitter.com/leiatheinvestor/status/1788003043805483214'
 #print( hashlib.md5( url.encode('utf-8')).hexdigest() + ".jpg" )
 
+
+
+
+# exemplo de uso
 df = pd.read_excel('dataset_imagens_twitter.xlsx',skiprows=HEADER_SIZE)
-df2 = df.head(10).copy()
+df2 = df.head(20).copy()
 extract_images_from_dataset(download_folder="images", dataset=df2,url_column_name='Status URL')
