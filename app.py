@@ -58,7 +58,7 @@ def download_images_from_url(url, download_path, wait_time_in_seconds):
             time.sleep(default_sleep_in_between)
             response = requests.get(image_url)
             image_path = os.path.join(download_path, sanitize_filename(image_url))
-            print(image_path)
+            #print(image_path)
             with open(image_path, 'wb') as f:
                 f.write(response.content)
             if file_size_in_bytes(image_path) < REGULAR_POST_IMAGE_SIZE_IN_BYTES:
